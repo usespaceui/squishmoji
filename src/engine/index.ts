@@ -1,0 +1,6 @@
+export * from './shapes'
+export * from './expressions'
+export * from './backgrounds'
+export { traitsFor, fitEyesToShape, minimumEyeClearance, type FittedEye } from './face'
+export { resolveLayout, buildLayout } from './layout'
+export { SquishEngine } from './animation'
