@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.spaceui.one/resources/squishmoji" target="_blank">
+  <a href="https://www.spaceui.one/tools/avatars?type=squishmoji" target="_blank">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://www.spaceui.one/logo-squishmoji.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://www.spaceui.one/logo-squishmoji.svg">
@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.spaceui.one/resources/squishmoji">Preview</a> • 
+  <a href="https://www.spaceui.one/tools/avatars?type=squishmoji">Preview</a> • 
   <a href="https://github.com/usespaceui/squishmoji">Source Code</a> • 
   <a href="https://www.spaceui.one">SpaceUI.one</a>
 </p>
@@ -88,7 +88,7 @@ yarn add @usespaceui/squishmoji
 You can import either `Squishmoji` or `Avatar`:
 
 ```tsx
-import { Squishmoji } from "@usespaceui/squishmoji/react";
+import { Squishmoji } from '@usespaceui/squishmoji/react'
 
 export default function UserProfile() {
   return (
@@ -102,7 +102,7 @@ export default function UserProfile() {
       animOnClick
       animOnHover
     />
-  );
+  )
 }
 ```
 
@@ -113,38 +113,33 @@ Set `animate={false}` whenever static rendering or reduced motion is preferred.
 Generate raw SVG markup or structured JSON data directly for server environments, API routes, or vanilla JavaScript:
 
 ```ts
-import {
-  createAvatar,
-  resolveLayout,
-  renderLayout,
-  SquishOutputFormat,
-} from "@usespaceui/squishmoji";
+import { createAvatar, resolveLayout, renderLayout, SquishOutputFormat } from '@usespaceui/squishmoji'
 
 // 1. Generate raw SVG markup (default)
-const svg = createAvatar("space-explorer", {
-  shape: "ufo",
-  expression: "amazed",
+const svg = createAvatar('space-explorer', {
+  shape: 'ufo',
+  expression: 'amazed',
   size: 256,
-  backgroundStyle: "solid",
-});
+  backgroundStyle: 'solid',
+})
 
 // 2. Generate structured JSON data with ready-to-use Data URI
-const avatarJson = createAvatar("space-explorer", {
-  shape: "cat",
-  expression: "loving",
-  format: "json", // or SquishOutputFormat.json
-});
+const avatarJson = createAvatar('space-explorer', {
+  shape: 'cat',
+  expression: 'loving',
+  format: 'json', // or SquishOutputFormat.json
+})
 // { seed, shape, expression, size, backgroundStyle, svg, dataUri, layout }
 
 // 3. Two-phase layout computation and custom rendering pipeline
-const layout = resolveLayout("space-explorer", {
-  shape: "ghost",
-  expression: "excited",
-});
+const layout = resolveLayout('space-explorer', {
+  shape: 'ghost',
+  expression: 'excited',
+})
 const renderedSvg = renderLayout(layout, {
   size: 256,
-  backgroundStyle: "taygeta",
-});
+  backgroundStyle: 'taygeta',
+})
 ```
 
 ---
@@ -229,7 +224,7 @@ MIT — Free for personal and commercial projects.
 
 ## 📚 Resources
 
-- 🔍 [Interactive Studio & Playground](https://squishmoji.spaceui.one)
+- 🔍 [Interactive Studio & Playground](https://www.spaceui.one/tools/avatars?type=squishmoji)
 - 📖 [Space UI Documentation](https://www.spaceui.one)
 - 🌍 [Space UI Community](https://github.com/usespaceui)
 
